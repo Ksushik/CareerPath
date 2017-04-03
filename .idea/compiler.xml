@@ -26,8 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="contacts" target="1.5" />
-      <module name="TechShopForPB" target="1.5" />
+      <module name="TechShopForPB" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

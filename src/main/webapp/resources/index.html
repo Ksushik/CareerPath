@@ -2,25 +2,46 @@
 <html lang="en">
 <head>
     <title>The Best Shop Ever :)</title>
-	<meta charset="utf-8"> 
-	<link rel="stylesheet" type="text/css" href="/resources/assets/css/vendor/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/resources/assets/css/style.css"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/resources/assets/css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/resources/assets/css/style.css"/>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css" rel="stylesheet"/>
 </head>
 <body>
-	<div class="container">
-		<form class="row">
-			<div class="col-3">
-				<input type="checkbox" class="is--available">
-			</div>
-			<div class="col-3">Filtering by price</div>
-			<div class="col-3">Filtering by category</div>
-			<div class="col-3">Filtering by manufacturer</div>
-		</form>
-		<div class="row" id="product--list">.</div>
-	</div>
+<h1 align="center">The Best Shop Ever :)</h1>
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="is--available">Show only available</label>
+                <input type="checkbox" id="is--available" onchange="showOnlyAvailable(this)"/>
+            </div>
+            <div class="col-sm-2">
+                <label for="filter--by--price">Filter by Price</label>
+                <input type="checkbox" id="filter--by--price" onchange="filterByPrice(this)">
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="selectpicker category" id="category" multiple data-selected-text-format="count > 3" >
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="manufacturer">Manufacturer</label>
+                    <select class="selectpicker manufacturer" id="manufacturer" multiple data-selected-text-format="count > 3">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row product--list" id="product--list"></div>
+</div>
 
-	<script src="/resources/assets/js/vendor/jquery.min.js"></script>
-	<script src="/resources/assets/js/vendor/bootstrap.min.js"></script>
-	<script src="/resources/assets/js/controller.js"></script>
+<script src="/resources/assets/js/vendor/jquery.min.js"></script>
+<script src="/resources/assets/js/vendor/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+<script src="/resources/assets/js/controller.js"></script>
 </body>
 </html>

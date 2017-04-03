@@ -20,8 +20,8 @@ public class CategoryDaoImpl implements CategoryDao {
     private EntityManager em;
 
     private static final String DB_DRIVER = "org.h2.Driver";
-    private static final String DB_CONNECTION = "jdbc:h2:mem:test;DB_CLOSE_DELAY=-1";
-    private static final String DB_USER = "";
+    private static final String DB_CONNECTION = "jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false";
+    private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "";
 
     private static Connection getDBConnection() {
@@ -50,13 +50,14 @@ public class CategoryDaoImpl implements CategoryDao {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM categories");
             while (resultSet.next()) {
                 categories.add(new Category(resultSet.getLong("CATEGORY_ID"),
-                        resultSet.getString("name")));
+                        resultSet.getString("NAME"), resultSet.getBoolean("IS_ROOT")));
             }
             statement.close();
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println(categories);
         return categories;
     }
 
@@ -71,7 +72,7 @@ public class CategoryDaoImpl implements CategoryDao {
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 result = new Category(resultSet.getLong("CATEGORY_ID"),
-                        resultSet.getString("name"));
+                        resultSet.getString("NAME"), resultSet.getBoolean("IS_ROOT"));
             }
             statement.close();
             connection.close();

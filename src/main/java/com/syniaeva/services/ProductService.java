@@ -10,8 +10,6 @@ public interface ProductService {
 
     void delete(Product product);
 
-    void clearAll();
-
     List<Product> getByCategory(String category);
 
     List<Product> getByManufacturer(String manufacturer);

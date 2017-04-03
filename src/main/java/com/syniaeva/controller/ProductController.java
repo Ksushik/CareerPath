@@ -1,5 +1,7 @@
 package com.syniaeva.controller;
 
+import com.syniaeva.entity.Category;
+import com.syniaeva.entity.Manufacturer;
 import com.syniaeva.model.Product;
 import com.syniaeva.services.CategoryService;
 import com.syniaeva.services.ManufacturerService;
@@ -46,6 +48,18 @@ public class ProductController {
 		return productService.getAll();
 	}
 
+	@RequestMapping(value = "/categories", method = RequestMethod.GET,
+			produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
+			consumes =  {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+	public @ResponseBody List<Category> getAllCategories() {
+		return categoryService.getAll();
+	}
 
+	@RequestMapping(value = "/manufacturers", method = RequestMethod.GET,
+			produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
+			consumes =  {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+	public @ResponseBody List<Manufacturer> getAllManufacturers() {
+		return manufacturerService.getll();
+	}
 
 }

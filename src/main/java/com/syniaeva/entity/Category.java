@@ -17,6 +17,12 @@ public class Category {
         this.name = name;
     }
 
+    public Category(Long id,String name, Boolean root) {
+        this.id = id;
+        this.name = name;
+        this.root = root;
+    }
+
     public Category() {
     }
 
@@ -92,5 +98,16 @@ public class Category {
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", root=" + root +
+                ", productList=" + productList +
+                ", manufacturers=" + manufacturers +
+                '}';
     }
 }

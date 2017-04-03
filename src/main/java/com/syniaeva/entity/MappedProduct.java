@@ -4,6 +4,8 @@ package com.syniaeva.entity;
 import javax.persistence.*;
 import java.util.Objects;
 
+import com.syniaeva.model.Product;
+
 @Entity
 @Table(name = "products")
 public class MappedProduct {
