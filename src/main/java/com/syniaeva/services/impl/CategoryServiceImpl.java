@@ -25,6 +25,10 @@ public class CategoryServiceImpl implements CategoryService {
         categoryDao.delete(category);
     }
 
+    public void delete(String categoryName) {
+        categoryDao.delete(categoryDao.findByName(categoryName));
+    }
+
     @Override
     public void update(Category category) {
         categoryDao.update(category);

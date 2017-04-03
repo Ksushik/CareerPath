@@ -199,5 +199,18 @@ function getAllProducts() {
   });
 }
 
+function deleteCategory(element) {
+  var categoryName = $(element).parent().parent()[0].childNodes[1].childNodes[1].childNodes[0];
+  $.ajax({
+    url: '/categories/del',
+    type: 'POST',
+    dataType: 'json',
+    contentType: 'application/json',
+    mimeType: 'application/json',
+    data: ({'categoryName': categoryName}),
+  });
+  getAllCategories();
+}
+
 
 $(document).ready(getAllCategories(), getAllManufacturers(), getAllProducts());

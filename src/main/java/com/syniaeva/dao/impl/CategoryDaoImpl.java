@@ -57,7 +57,6 @@ public class CategoryDaoImpl implements CategoryDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(categories);
         return categories;
     }
 

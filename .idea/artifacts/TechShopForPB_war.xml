@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="TechShopForPB:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="skillsUpContact.war">
+    <root id="archive" name="techshop.war">
       <element id="artifact" artifact-name="TechShopForPB:war exploded" />
     </root>
   </artifact>

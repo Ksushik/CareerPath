@@ -23,7 +23,7 @@
             <div class="col-sm-3">
                 <div class="form-group">
                     <label for="category">Category</label>
-                    <select class="selectpicker category" id="category" multiple data-selected-text-format="count > 3" >
+                    <select class="selectpicker category" id="category" multiple data-selected-text-format="count > 3">
                     </select>
                 </div>
             </div>
@@ -36,7 +36,158 @@
             </div>
         </div>
     </form>
-    <div class="row product--list" id="product--list"></div>
+    <div class="row">
+        <div class="col-sm-3">
+            <ul class="media-list list-group">
+                <li class="media list-group-item">
+                    <div class="media-body media-left">
+                        <h4 class="media-heading">Крупная бытовая техника</h4>
+                    </div>
+                    <div class="media-right">
+                        <a href="#" onclick="deleteCategory(this)">
+                            <img class="media-object" src="/resources/pictures/delete.png"/>
+                        </a>
+                    </div>
+                    <ul class="media-list list-group">
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Холодильники</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory(this)">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Стиральные машины</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Газовые плиты</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="media-list list-group-item">
+                    <div class="media-body media-left">
+                        <h4 class="media-heading">Мелкая бытовая техника</h4>
+                    </div>
+                    <div class="media-right">
+                        <a href="#" onclick="deleteCategory()">
+                            <img class="media-object" src="/resources/pictures/delete.png"/>
+                        </a>
+                    </div>
+                    <ul class="media list-group">
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Пылесосы</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Электрочайники</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                    </ul>
+                </li>
+                <li class="media-list list-group-item">
+                    <div class="media-body media-left">
+                        <h4 class="media-heading">Телевизоры и аксессуары</h4>
+                    </div>
+                    <div class="media-right">
+                        <a href="#" onclick="deleteCategory()">
+                            <img class="media-object" src="/resources/pictures/delete.png"/>
+                        </a>
+                    </div>
+                    <ul class="media list-group">
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Телевизоры</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Акустика Hi-Fi</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Домашние кинотеатры</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">DVD/HD-медиаплееры</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                        <li class="media list-group-item">
+                            <div class="media-body media-left">
+                                <h4 class="media-heading">Аксессуары</h4>
+                            </div>
+                            <div class="media-right">
+                                <a href="#" onclick="deleteCategory()">
+                                    <img class="media-object" src="/resources/pictures/delete.png"/>
+                                </a>
+                            </div>
+                        </li>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-9">
+            <div class="row product--list" id="product--list"></div>
+        </div>
+    </div>
 </div>
 
 <script src="/resources/assets/js/vendor/jquery.min.js"></script>
