@@ -199,5 +199,9 @@ function getAllProducts() {
   });
 }
 
+function deleteCategory(e) {
+    console.log($(e).parent().parent());
+}
+
 
 $(document).ready(getAllCategories(), getAllManufacturers(), getAllProducts());
