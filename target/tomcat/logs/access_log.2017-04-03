@@ -1,0 +1,4 @@
+127.0.0.1 - - [03/Apr/2017:07:52:40 +0300] "GET / HTTP/1.1" 304 - http-bio-9090-exec-1 81
+127.0.0.1 - - [03/Apr/2017:07:52:40 +0300] "GET /resources/assets/js/controller.js HTTP/1.1" 200 3034 http-bio-9090-exec-7 24
+127.0.0.1 - - [03/Apr/2017:07:52:40 +0300] "GET /resources/assets/js/vendor/jquery.min.map HTTP/1.1" 404 949 http-bio-9090-exec-8 17
+127.0.0.1 - - [03/Apr/2017:07:52:41 +0300] "GET /products HTTP/1.1" 200 479 http-bio-9090-exec-2 359
