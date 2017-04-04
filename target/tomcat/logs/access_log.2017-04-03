@@ -1,9 +1,0 @@
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET / HTTP/1.1" 304 - http-bio-9290-exec-1 62
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /resources/assets/js/controller.js HTTP/1.1" 200 5931 http-bio-9290-exec-7 15
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /resources/assets/js/vendor/jquery.min.map HTTP/1.1" 404 949 http-bio-9290-exec-8 6
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /products/categories HTTP/1.1" 200 1334 http-bio-9290-exec-2 202
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /resources/assets/css/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 404 949 http-bio-9290-exec-10 25
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /products/manufacturers HTTP/1.1" 200 183 http-bio-9290-exec-3 314
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /products HTTP/1.1" 200 2277 http-bio-9290-exec-9 322
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /resources/assets/css/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 404 949 http-bio-9290-exec-8 3
-0:0:0:0:0:0:0:1 - - [03/Apr/2017:18:54:30 +0300] "GET /resources/assets/css/fonts/glyphicons-halflings-regular.ttf HTTP/1.1" 404 949 http-bio-9290-exec-8 3

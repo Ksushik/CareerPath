@@ -116,6 +116,6 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public void delete(Category category) {
-        em.remove(category);
+        em.remove(em.contains(category) ? category : em.merge(category));
     }
 }

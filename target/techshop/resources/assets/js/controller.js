@@ -31,6 +31,39 @@ function getPictureUrl(category) {
   }
 }
 
+function getCode(category) {
+  switch (category) {
+    case "Крупная бытовая техника":
+      return 1;
+    case "Холодильники":
+      return 1.1;
+    case "Стиральные машины":
+      return 1.2;
+    case "Газовые плиты":
+      return 1.3;
+    case "Мелкая бытовая техника":
+      return 2;
+    case "Пылесосы":
+      return 2.1;
+    case "Электрочайники":
+      return 2.2;
+    case "Телевизоры и аксессуары":
+      return 3;
+    case "Телевизоры":
+      return 3.1;
+    case "Акустика Hi-Fi":
+      return 3.2;
+    case "Домашние кинотеатры":
+      return 3.3;
+    case "DVD/HD-медиаплееры":
+      return 3.4;
+    case "Аксессуары":
+      return 3.5;
+    default:
+      return 3.6;
+  }
+}
+
 function createCell(val) {
   return '<div class="col-sm-6 col-md-4"><div class="thumbnail"><img src="' + getPictureUrl(val.category) + '"/><div class="caption"><h3>' + val.name + '</h3><p><b>' + 'Категория товара: ' + val.category + '</b></p>'+ '<p>' + val.description + '</p>' + '<p>' + val.price + "UAH" + '</p>' + createBungle(val.available) + '<div/><div/>';
 }
@@ -202,13 +235,14 @@ function getAllProducts() {
 function deleteCategory(element) {
   var categoryName = $(element).parent().parent()[0].childNodes[1].childNodes[1].childNodes[0];
   $.ajax({
-    url: '/categories/del',
+    url: '/products/categories/del/' + getCode(categoryName.nodeValue.toString()),
     type: 'POST',
     dataType: 'json',
     contentType: 'application/json',
     mimeType: 'application/json',
-    data: ({'categoryName': categoryName}),
+    // data: ({"categoryCode": getCode(categoryName.nodeValue.toString())}),
   });
+
   getAllCategories();
 }
 

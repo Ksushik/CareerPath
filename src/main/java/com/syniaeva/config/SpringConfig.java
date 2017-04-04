@@ -69,4 +69,5 @@ public class SpringConfig {
         properties.put("hibernate.hbm2ddl.auto", "update");
         return properties;
     }
+
 }

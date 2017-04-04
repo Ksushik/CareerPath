@@ -5,6 +5,7 @@ import com.syniaeva.entity.Category;
 import com.syniaeva.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class CategoryServiceImpl implements CategoryService {
         categoryDao.delete(category);
     }
 
+    @Transactional
     public void delete(String categoryName) {
         categoryDao.delete(categoryDao.findByName(categoryName));
     }
