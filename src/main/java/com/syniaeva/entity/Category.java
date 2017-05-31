@@ -17,11 +17,6 @@ public class Category {
         this.name = name;
     }
 
-    public Category(Long id,String name, Boolean root) {
-        this.id = id;
-        this.name = name;
-        this.root = root;
-    }
 
     public Category() {
     }
@@ -34,17 +29,10 @@ public class Category {
     @Column(name = "NAME", length=255, nullable=false, unique = true)
     private String name;
 
-    @Column(name = "IS_ROOT", nullable = false)
-    private Boolean root;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category", cascade={CascadeType.ALL})
-    private List<MappedProduct> productList;
+    private List<Topic> topics;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name="CATEGORY_MANUFACTURERS",
-            joinColumns={@JoinColumn(name="CATEGORY_ID")},
-            inverseJoinColumns={@JoinColumn(name="MANUFACTURER_ID")})
-    private List<Manufacturer> manufacturers;
 
     public Long getId() {
         return id;
@@ -62,28 +50,13 @@ public class Category {
         this.name = name;
     }
 
-    public Boolean isRoot() {
-        return root;
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
-    public void setRoot(Boolean root) {
-        this.root = root;
-    }
-
-    public List<MappedProduct> getProductList() {
-        return productList;
-    }
-
-    public void setProductList(List<MappedProduct> productList) {
-        this.productList = productList;
-    }
-
-    public List<Manufacturer> getManufacturers() {
-        return manufacturers;
-    }
-
-    public void setManufacturers(List<Manufacturer> manufacturers) {
-        this.manufacturers = manufacturers;
+    public void setTopics(List<Topic> manufacturers) {
+        this.topics = topics;
     }
 
     @Override

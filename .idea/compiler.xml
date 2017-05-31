@@ -22,10 +22,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="CareerPath" />
         <module name="TechShopForPB" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CareerPath" target="1.8" />
       <module name="TechShopForPB" target="1.8" />
     </bytecodeTargetLevel>
   </component>

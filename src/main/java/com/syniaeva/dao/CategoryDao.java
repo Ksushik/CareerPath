@@ -11,10 +11,6 @@ public interface CategoryDao {
 
     List<Category> findAll();
 
-    Category findById(Long id);
-
-    Category findByName(String name);
-
     void update(Category category);
 
     void save (Category category);
