@@ -1,5 +1,7 @@
 package com.syniaeva.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +19,6 @@ public class Category {
         this.name = name;
     }
 
-
     public Category() {
     }
 
@@ -29,10 +30,9 @@ public class Category {
     @Column(name = "NAME", length=255, nullable=false, unique = true)
     private String name;
 
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "category", cascade={CascadeType.ALL})
+    @JsonIgnore
     private List<Topic> topics;
-
 
     public Long getId() {
         return id;
