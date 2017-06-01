@@ -1,6 +1,6 @@
 body {
-    background-color: #FFEFD5;
-    background-image: inline("pictures/evolution.jpg");
+    background-image: url("../pictures/evolution.jpg");
+    background-size: cover;
 }
 
 

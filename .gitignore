@@ -1,15 +1,27 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Java template
-*.class
+# use glob syntax.
+syntax: glob
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+#IDEA files
+.idea/**
+target
+*.iml
+*.ipr
 
-# Package Files #
-*.jar
-*.war
-*.ear
+overlays
+bin
+.classpath
+.*project
+.settings
+*.pyc
+*~
+*.log
+buildInfo.jsp
+.directory
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+pom.xml.releaseBackup
+release.properties
 
+# Frontend plugins
+syntax: glob
+src/main/frontend/node/**
+src/main/frontend/node_modules/**
