@@ -22,7 +22,7 @@
 		<skipTests>false</skipTests>
 		<maven-frontend.nodeDownloadRoot>https://edevtools3gl.bank.swissquote.ch/config_offshoring/sq-softwares/node/</maven-frontend.nodeDownloadRoot>
 		<maven-frontend.npmDownloadRoot>https://edevtools3gl.bank.swissquote.ch/config_offshoring/sq-softwares/npm/</maven-frontend.npmDownloadRoot>
-		<npm.build.mode>prod</npm.build.mode>
+		<npm.build.mode>dev</npm.build.mode>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -169,7 +169,7 @@
 				<filtering>true</filtering>
 			</resource>
 			<resource>
-				<directory>src/main/frontend</directory>
+				<directory>src/main/webapp</directory>
 				<includes>
 					<include>.env</include>
 				</includes>
@@ -199,57 +199,57 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--<plugin>-->
-				<!--<groupId>com.github.eirslett</groupId>-->
-				<!--<artifactId>frontend-maven-plugin</artifactId>-->
-				<!--<configuration>-->
-					<!--<workingDirectory>src/main/frontend</workingDirectory>-->
-				<!--</configuration>-->
-				<!--<executions>-->
-					<!--<execution>-->
-						<!--<id>install node and npm</id>-->
-						<!--<goals>-->
-							<!--<goal>install-node-and-npm</goal>-->
-						<!--</goals>-->
-						<!--<configuration>-->
-							<!--<nodeVersion>${node.version}</nodeVersion>-->
-							<!--<npmVersion>${npm.version}</npmVersion>-->
-							<!--&lt;!&ndash;<nodeDownloadRoot>${maven-frontend.nodeDownloadRoot}</nodeDownloadRoot>&ndash;&gt;-->
-							<!--&lt;!&ndash;<npmDownloadRoot>${maven-frontend.npmDownloadRoot}</npmDownloadRoot>&ndash;&gt;-->
-						<!--</configuration>-->
-					<!--</execution>-->
-					<!--<execution>-->
-						<!--<id>npm install</id>-->
-						<!--<goals>-->
-							<!--<goal>npm</goal>-->
-						<!--</goals>-->
-						<!--<configuration>-->
-							<!--<arguments>install</arguments>-->
-						<!--</configuration>-->
-					<!--</execution>-->
-					<!--<execution>-->
-						<!--<id>npm build</id>-->
-						<!--<goals>-->
-							<!--<goal>npm</goal>-->
-						<!--</goals>-->
-						<!--<phase>process-resources</phase>-->
-						<!--<configuration>-->
-							<!--<arguments>run-script build-${npm.build.mode}</arguments>-->
-						<!--</configuration>-->
-					<!--</execution>-->
-					<!--<execution>-->
-						<!--<id>npm test</id>-->
-						<!--<goals>-->
-							<!--<goal>npm</goal>-->
-						<!--</goals>-->
-						<!--<phase>test</phase>-->
-						<!--<configuration>-->
-							<!--<arguments>test</arguments>-->
-							<!--<skip>${skipTests}</skip>-->
-						<!--</configuration>-->
-					<!--</execution>-->
-				<!--</executions>-->
-			<!--</plugin>-->
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<configuration>
+					<workingDirectory>src/main/webapp</workingDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>${node.version}</nodeVersion>
+							<npmVersion>${npm.version}</npmVersion>
+							<!--<nodeDownloadRoot>${maven-frontend.nodeDownloadRoot}</nodeDownloadRoot>-->
+							<!--<npmDownloadRoot>${maven-frontend.npmDownloadRoot}</npmDownloadRoot>-->
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>install</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>process-resources</phase>
+						<configuration>
+							<arguments>run-script build</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm test</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>test</phase>
+						<configuration>
+							<arguments>test</arguments>
+							<skip>${skipTests}</skip>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

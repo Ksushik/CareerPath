@@ -1,8 +1,0 @@
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET / HTTP/1.1" 304 - http-bio-9290-exec-1 81
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /node_modules/react/dist/react.js HTTP/1.1" 404 949 http-bio-9290-exec-2 9
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /resources/assets/css/style.css HTTP/1.1" 304 - http-bio-9290-exec-7 6
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /node_modules/react-dom/dist/react-dom.js HTTP/1.1" 404 949 http-bio-9290-exec-3 8
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /node_modules/react/dist/react.js HTTP/1.1" 404 949 http-bio-9290-exec-10 3
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /node_modules/react-dom/dist/react-dom.js HTTP/1.1" 404 949 http-bio-9290-exec-1 4
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /resources/assets/js/vendor/jquery.min.map HTTP/1.1" 404 949 http-bio-9290-exec-9 13
-127.0.0.1 - - [01/Jun/2017:02:02:11 +0300] "GET /skills/categories HTTP/1.1" 200 202 http-bio-9290-exec-2 327
