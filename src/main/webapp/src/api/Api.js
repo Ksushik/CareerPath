@@ -21,7 +21,7 @@ function handleError(response) {
 
 
 const doRequest = (baseUrl, path, reqType, data) =>
-  fetch(`${baseUrl}${HOME}/${path}`, {
+  fetch(`${baseUrl}/${path}`, {
     method: reqType,
     credentials: "same-origin",
     headers: {
@@ -32,7 +32,7 @@ const doRequest = (baseUrl, path, reqType, data) =>
 
 
 export const  getAllSkills = (baseUrl, path, reqType) =>
-  doRequest(baseUrl, path, reqType)
+  doRequest(baseUrl, '/skills', 'GET')
     .then(checkStatus)
     .then(response => response.json())
     .catch(handleError);
