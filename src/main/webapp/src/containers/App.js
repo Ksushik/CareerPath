@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "../App.css";
+import "../../css/App.css";
 import {connect} from "react-redux";
 import {BootstrapTable, TableHeaderColumn} from "react-bootstrap-table";
 import {Checkbox, Col} from "react-bootstrap";

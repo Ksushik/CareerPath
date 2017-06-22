@@ -19,11 +19,11 @@ public class ServletContextConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/build/**").addResourceLocations("/build/");
+		registry.addResourceHandler("/**").addResourceLocations("/");
 	}
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("/build/index.html");
+		registry.addViewController("/").setViewName("/index.html");
 	}
 }
